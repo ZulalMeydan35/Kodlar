@@ -1,0 +1,93 @@
+public class Main
+{
+	public static void main(String[] args) {
+		java.util.Scanner kb= new java.util.Scanner(System.in);
+		
+		Double miktar,secim,secim2;
+		System.out.println("Dönüştüreceğiniz döviz nedir? (Dolar için=1, Euro için=2, Sterlin için=3, Tl=4)");
+		secim2=Double.parseDouble(kb.nextLine());
+		System.out.println("Ne kadarınızı dönüştürmek istersiniz?");
+		miktar=Double.parseDouble(kb.nextLine());
+		if (secim2==1){
+		    System.out.println("Dövizinizi neye dönüştümek istersiniz? (Euro için=2, Sterlin için=3, Tl için=4'e basın.");
+		    secim=Double.parseDouble(kb.nextLine());
+		    if(secim==2){
+		        miktar=miktar*0.93;
+		        System.out.println(miktar);
+		    }
+		    else if(secim==3){
+		        miktar=miktar*0.83;
+		        System.out.println(miktar);
+		    }
+		    else if(secim==4){
+		        miktar=miktar*18.83;
+		        System.out.println(miktar);
+		    }
+		    else{
+		        System.out.println("Hatalı Giriş");
+		    }
+		}
+	    else if(secim2==2){
+	        System.out.println("Dövizinizi neye dönüştümek istersiniz? (Dolar için=1, Sterlin için=3, Tl için=4'e basın.");
+		    secim=Double.parseDouble(kb.nextLine());
+		    if(secim==1){
+		        miktar=miktar*1.08;
+		        System.out.println(miktar);
+		    }
+		    else if(secim==3){
+		        miktar=miktar*0.89;
+		        System.out.println(miktar);
+		    }
+		    else if(secim==4){
+		        miktar=miktar*20.27;
+		        System.out.println(miktar);
+		    }
+		    else{
+		        System.out.println("Hatalı Girdiniz");
+		    }
+	        
+	    }
+	    else if(secim2==3){
+	        System.out.println("Dövizinizi neye dönüştümek istersiniz? (Dolar için=1, Euro için=2, Tl için=4'e basın.");
+		    secim=Double.parseDouble(kb.nextLine());
+		    if(secim==1){
+		        miktar=miktar*1.21;
+		        System.out.println(miktar);
+		    }
+		    else if(secim==2){
+		        miktar=miktar*1.12;
+		        System.out.println(miktar);
+		    }
+		    else if(secim==4){
+		        miktar=miktar*22.70;
+		        System.out.println(miktar);
+		    }
+		    else{
+		        System.out.println("Hatalı Giriş");
+		    }
+	    }
+	    else if(secim2==4){
+	        System.out.println("Dövizinizi neye dönüştümek istersiniz? (Dolar için=1, Euro için=2, Sterlin için=3'e basın.");
+		    secim=Double.parseDouble(kb.nextLine());
+		    if(secim==1){
+		        miktar=miktar*0.053;
+		        System.out.println(miktar);
+		    }
+		    else if(secim==2){
+		        miktar=miktar*0.049;
+		        System.out.println(miktar);
+		    }
+		    else if(secim==3){
+		        miktar=miktar*0.044;
+		        System.out.println(miktar);
+		    }
+		    else{
+		        System.out.println("Hatalı Girdiniz.");
+		    }
+	    }
+	    else{
+	        System.out.println("Hatalı Girdiniz");
+	    }
+    }  
+}
+
