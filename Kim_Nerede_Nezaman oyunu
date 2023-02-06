@@ -1,0 +1,36 @@
+package random;
+ import java.util.Random;
+public class Main{ 
+	public static void main(String[] args) {
+		java.util.Scanner kb= new java.util.Scanner(System.in);
+		String[] kim={"Ali","Ayşe","Veli","Mustafa","Selim","Zülal"};
+		String[] kiminle={"Ahmet","Zeynep","Süleyman","Zuhal","Hilal","Şamil"};
+		String[] nerede={"Evde","Arabada","Lunaparkta","Yolda","Okulda","Holde"};
+		String[] ne_zaman={"Öğlen","Akşam","Gece","Kimse Yokken","Sabah"};
+		String[] nasil={"Uyuyarak","Koşarak","Gülerek","Ağlayarak","Bakarak"};
+		String[] ne_yapiyor={"Yürüyor","Sallanıyor","Düşüyor","Dans Ediyor"};
+		
+		Random rastgele=new Random();
+		int kim1=rastgele.nextInt(kim.length);
+		int kiminle1=rastgele.nextInt(kiminle.length);
+		int nerede1=rastgele.nextInt(nerede.length);
+		int ne_zaman1=rastgele.nextInt(ne_zaman.length);
+		int nasil1=rastgele.nextInt(nasil.length);
+		int ne_yapiyor1=rastgele.nextInt(ne_yapiyor.length);
+		
+		System.out.println("Oyuna Başlamak İçin 1'e basın");
+		int cvp=Integer.parseInt(kb.nextLine());
+		if(cvp==1){
+		    System.out.println("kim"+ kim[kim1]);
+		    System.out.println("kiminle"+ kiminle[kiminle1]);
+		    System.out.println("nerede"+ nerede[nerede1]);
+		    System.out.println("ne zaman"+ ne_zaman[ne_zaman1]);
+		    System.out.println("nasıl"+ nasil[nasil1]);
+		    System.out.println("ne yapıyor"+ ne_yapiyor[ne_yapiyor1]);
+		}
+		else{
+		    System.out.println("Hatalı Girdiniz");
+		}
+    }  
+}
+
