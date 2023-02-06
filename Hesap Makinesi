@@ -1,0 +1,38 @@
+public class Main
+{
+	public static void main(String[] args) {
+		java.util.Scanner kb= new java.util.Scanner(System.in);
+		
+		int x,y,z,sonuc;
+		System.out.println("");
+		x=Integer.parseInt(kb.nextLine());
+		System.out.println("");
+		y=Integer.parseInt(kb.nextLine());
+		System.out.println("Çarpma için=1, Bölme için=2, Toplama için=3, Çıkarma için=4, Mod alma için=5'e basınız.");
+		z=Integer.parseInt(kb.nextLine());
+		
+		 if(z==1){
+	        sonuc=x*y;
+	        System.out.println(sonuc);
+	   }
+	   else if(z==2){
+	        sonuc=x/y;
+	        System.out.println(sonuc);
+	   }
+	   else if(z==3){
+	        sonuc=x+y;
+	        System.out.println(sonuc);
+	   }
+	   else if(z==4){
+	        sonuc=x-y;
+	        System.out.println(sonuc);
+	   }
+	   else if(z==5){
+	        sonuc=x%y;
+	        System.out.println(sonuc);
+	   }
+	   else{
+	       System.out.println("Hatalı Sayı Girdiniz.");
+	   }
+    }  
+}
