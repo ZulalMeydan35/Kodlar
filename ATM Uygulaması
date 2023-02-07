@@ -1,0 +1,59 @@
+public class Main
+{
+	public static void main(String[] args) {
+	    java.util.Scanner kb =new java.util.Scanner(System.in);
+		System.out.println("Merhaba Kullanici");
+		int kayitli_sifre,sifre,islem,secim,cvp;
+		double bakiye,ikinci_bakiye;
+		System.out.println("Şifrenizi giriniz");
+		kayitli_sifre=1234;
+		cvp=1;
+		ikinci_bakiye=10000;
+		secim=0;
+		bakiye=12000;
+		sifre=Integer.parseInt(kb.nextLine());
+		if (sifre==kayitli_sifre){
+		    System.out.println("Hoşgeldiniz");
+		    System.out.println("Para çekmek için=1       Para yatırmak için=2" +'\n' + "Para göndermek için=3             Bakiye görüntülemek için=4'e basınız.");
+		    islem=Integer.parseInt(kb.nextLine());
+		    do{
+		    switch(islem){
+		        case 1: System.out.println("Ne kadar çekmek istersiniz?");
+		        secim=Integer.parseInt(kb.nextLine());
+		        bakiye=bakiye-secim;
+		        System.out.println("İşleminiz yapılmıştır yeni bakiyeniz:"+bakiye);
+		        System.out.println("Başka işlem yapmak ister misiniz?Para Çekmek=1,Para Yatırmak=2, Para Göndermek=3, Bakiye Görüntülemek=4, Çıkmak=0");
+		        islem=Integer.parseInt(kb.nextLine());
+		        break;
+		        
+		        case 2: System.out.println("Ne kadar yatırmak istersiniz?");
+		        secim=Integer.parseInt(kb.nextLine());
+		        bakiye=bakiye+secim;
+		        System.out.println("İşleminiz yapılmıştır yeni bakiyeniz:"+bakiye);
+		        System.out.println("Başka işlem yapmak ister misiniz?Para Çekmek=1,Para Yatırmak=2, Para Göndermek=3, Bakiye Görüntülemek=4, Çıkmak=0");
+		        islem=Integer.parseInt(kb.nextLine());
+		        break;
+		        
+		        case 3: System.out.println("Ne kadar göndermek istersiniz?");
+		        secim=Integer.parseInt(kb.nextLine());
+		        bakiye=bakiye-secim;
+		        ikinci_bakiye=bakiye+secim;
+		        System.out.println("İşleminiz yapılmıştır yeni bakiyeniz:"+bakiye);
+		        System.out.println("İşleminiz yapılmıştır gönderdiğiniz bakiye:"+ikinci_bakiye);
+		        System.out.println("Başka işlem yapmak ister misiniz?Para Çekmek=1,Para Yatırmak=2, Para Göndermek=3, Bakiye Görüntülemek=4, Çıkmak=0");
+		        islem=Integer.parseInt(kb.nextLine());
+		        break;
+		        
+		        case 4: System.out.println(bakiye);
+		        System.out.println("Başka işlem yapmak ister misiniz?Para Çekmek=1,Para Yatırmak=2, Para Göndermek=3, Bakiye Görüntülemek=4, Çıkmak=0");
+		        islem=Integer.parseInt(kb.nextLine());
+		        break;
+		        }
+		    }
+		    while(islem!=0);
+		}
+		else{
+		    System.out.println("Hatalı giriş yaptınız");
+		}
+	}
+}
