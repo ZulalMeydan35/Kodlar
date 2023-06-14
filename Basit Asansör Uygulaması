@@ -1,0 +1,80 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner kb = new Scanner(System.in);
+	    int kat;
+	    int fan=0;
+	    System.out.println("Kaçıncı Kata Çıkmak İstiyorsunuz?");
+	    kat=kb.nextInt();
+	    switch(kat){
+	        case 1:
+	            System.out.println("Kapı Kapanıyor ");
+	            System.out.println("1.ci kata çıkıyorsunuz ");
+	            System.out.println("Fanı Açmak İçin 1'e basın Açmak İstemiyorsanız 0'a basın");
+	            fan=kb.nextInt();
+	            if(fan==1){
+	                System.out.println("Fan Çalıştırılıyor");
+	            }
+	            else if(fan==0){
+	                System.out.println("Fan Çalıştırılmıyor");
+	            }
+	            System.out.println("Geldiniz!");
+	            break;
+	       case 2:
+	            System.out.println("Kapı Kapanıyor");
+	            System.out.println("2.ci kata çıkıyorsunuz");
+	            System.out.println("Fanı Açmak İçin 1'e basın Açmak İstemiyorsanız 0'a basın");
+	            fan=kb.nextInt();
+	            if(fan==1){
+	                System.out.println("Fan Çalıştırılıyor");
+	            }
+	            else if(fan==0){
+	                System.out.println("Fan Çalıştırılmıyor");
+	            }
+	            System.out.println("Geldiniz!");
+	            break;
+	       case 3:
+    	            System.out.println("Kapı Kapanıyor");
+	            System.out.println("3.cü kata çıkıyorsunuz");
+	            System.out.println("Fanı Açmak İçin 1'e basın Açmak İstemiyorsanız 0'a basın");
+	            fan=kb.nextInt();
+	            if(fan==1){
+	                System.out.println("Fan Çalıştırılıyor");
+	            }
+	            else if(fan==0){
+	                System.out.println("Fan Çalıştırılmıyor");
+	            }
+	            System.out.println("Geldiniz!");
+	            break;
+	       case 4:
+	            System.out.println("Kapı Kapanıyor");
+	            System.out.println("4.cü kata çıkıyorsunuz");
+	            System.out.println("Fanı Açmak İçin 1'e basın Açmak İstemiyorsanız 0'a basın");
+	            fan=kb.nextInt();
+	            if(fan==1){
+	                System.out.println("Fan Çalıştırılıyor");
+	            }
+	            else if(fan==0){
+	                System.out.println("Fan Çalıştırılmıyor");
+	            }
+	            System.out.println("Geldiniz!");
+	            break;
+	       case 5:
+	            System.out.println("Kapı Kapanıyor");
+	            System.out.println("5.ci kata çıkıyorsunuz");
+	            System.out.println("Fanı Açmak İçin 1'e basın Açmak İstemiyorsanız 0'a basın");
+	            fan=kb.nextInt();
+	            if(fan==1){
+	                System.out.println("Fan Çalıştırılıyor");
+	            }
+	            else if(fan==0){
+	                System.out.println("Fan Çalıştırılmıyor");
+	            }
+	            System.out.println("Geldiniz!");
+	            break;
+	       default:
+	            System.out.println("Hatalı Kat Girdiniz. Bu binada 5 Kat Bulunmakta!");
+	   	    }
+	}
+}
