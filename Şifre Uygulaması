@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main
+    {
+    	public static void main(String[] args) {
+            Scanner input = new Scanner(System.in);
+            String sifre="kbhayn";
+            System.out.println("Şifrenizi girin");
+            sifre=input.nextLine();
+            int uzunluk=sifre.length();
+                if(uzunluk==6){
+                    System.out.println("Şifreniz Belirlendi");
+                    
+                }
+                else if(uzunluk>6){
+                    System.out.println("Şifreniz karakter sınırını aşıyor lütfen 6 haneli bir şifre oluşturun.");
+                    
+                }
+                else if(uzunluk<6){
+                    System.out.println("Şifreniz karakter sınırından az lütfen 6 haneli bir şifre belirleyin.");
+                    
+                }
+                else{
+                    System.out.println("Şifre Girme Hakkınız Bitmiştir.");
+                    
+                }
+            
+        
+    
+    }
+}
