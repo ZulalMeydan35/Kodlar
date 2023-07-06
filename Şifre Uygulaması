@@ -1,31 +1,70 @@
 import java.util.Scanner;
-
 public class Main
-    {
-    	public static void main(String[] args) {
-            Scanner input = new Scanner(System.in);
-            String sifre="kbhayn";
-            System.out.println("Şifrenizi girin");
-            sifre=input.nextLine();
-            int uzunluk=sifre.length();
-                if(uzunluk==6){
-                    System.out.println("Şifreniz Belirlendi");
-                    
+{
+	public static void main(String[] args) {
+	   Scanner scanner = new Scanner(System.in);
+	   String kullaniciAdi = "admin";
+       String sifre = "123456";
+
+       boolean girisBasarili = false;
+       while (!girisBasarili) {
+            System.out.print("Kullanıcı Adı: ");
+            String girilenKullaniciAdi = scanner.nextLine();
+
+            System.out.print("Şifre: ");
+            String girilenSifre = scanner.nextLine();
+
+            if (girilenKullaniciAdi.equals(kullaniciAdi) && girilenSifre.equals(sifre)) {
+                girisBasarili = true;
+            } else {
+                System.out.println("Hatalı kullanıcı adı veya şifre! Tekrar deneyin.");
+            }
+        }
+
+        System.out.println("Şifre veya kullanıcı adını değiştirmek ister misiniz?");
+        System.out.println("1. Şifre değiştir");
+        System.out.println("2. Kullanıcı adı değiştir");
+        System.out.println("3. Çıkış");
+
+        int secim = scanner.nextInt();
+        scanner.nextLine(); // Boş satırı oku
+
+        while (secim != 3) {
+            if (secim == 1) {
+                System.out.print("Yeni şifre: ");
+                String yeniSifre = scanner.nextLine();
+                if (yeniSifre.length() == 6) {
+                    sifre = yeniSifre;
+                    System.out.println("Şifre başarıyla değiştirildi.");
+                    break;
+                } else {
+                    System.out.println("Şifre 6 haneli olmalıdır. Yeniden deneyin.");
                 }
-                else if(uzunluk>6){
-                    System.out.println("Şifreniz karakter sınırını aşıyor lütfen 6 haneli bir şifre oluşturun.");
-                    
+            } else if (secim == 2) {
+                System.out.print("Yeni kullanıcı adı: ");
+                String yeniKullaniciAdi = scanner.nextLine();
+                if (yeniKullaniciAdi.length() == 10) {
+                    kullaniciAdi = yeniKullaniciAdi;
+                    System.out.println("Kullanıcı adı başarıyla değiştirildi.");
+                    break;
+                } else {
+                    System.out.println("Kullanıcı adı 10 haneli olmalıdır. Yeniden deneyin.");
                 }
-                else if(uzunluk<6){
-                    System.out.println("Şifreniz karakter sınırından az lütfen 6 haneli bir şifre belirleyin.");
-                    
-                }
-                else{
-                    System.out.println("Şifre Girme Hakkınız Bitmiştir.");
-                    
-                }
-            
-        
-    
-    }
+            } else {
+                System.out.println("Geçersiz seçim. Tekrar deneyin.");
+            }
+
+            System.out.println("Şifre veya kullanıcı adını değiştirmek ister misiniz?");
+            System.out.println("1. Şifre değiştir");
+            System.out.println("2. Kullanıcı adı değiştir");
+            System.out.println("3. Çıkış");
+
+            secim = scanner.nextInt();
+            scanner.nextLine(); // Boş satırı oku
+        }
+
+        System.out.println("Program sonlandırılıyor...");
+
+        scanner.close();
+	}
 }
