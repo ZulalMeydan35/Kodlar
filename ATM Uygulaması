@@ -37,7 +37,7 @@ public class Main
 		        case 3: System.out.println("Ne kadar göndermek istersiniz?");
 		        secim=Integer.parseInt(kb.nextLine());
 		        bakiye=bakiye-secim;
-		        ikinci_bakiye=bakiye+secim;
+		        ikinci_bakiye=ikinci_bakiye+secim;
 		        System.out.println("İşleminiz yapılmıştır yeni bakiyeniz:"+bakiye);
 		        System.out.println("İşleminiz yapılmıştır gönderdiğiniz bakiye:"+ikinci_bakiye);
 		        System.out.println("Başka işlem yapmak ister misiniz?Para Çekmek=1,Para Yatırmak=2, Para Göndermek=3, Bakiye Görüntülemek=4, Çıkmak=0");
