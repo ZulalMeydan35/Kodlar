@@ -1,0 +1,75 @@
+static void Main(string[] args)
+{
+    int say1, say2, cevap, sonuc;
+    bool temiz = true;
+    while (temiz == true)
+    {
+
+        Console.Write("Hoşgeldiniz \n");
+        Console.Write("Lütfen hesaplamak istediğiniz sayıları girin. \n");
+        say1 = Convert.ToInt32(Console.ReadLine());
+        say2 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Lütfen Yapmak İstediğiniz İşlemi Seçin.");
+        Console.Write("Toplama =1, Çıkarma=2, Çarpma=3, Bölme=4 \n");
+        cevap = Convert.ToInt32(Console.ReadLine());
+        switch (cevap)
+        {
+            case 1:
+                sonuc = say1 + say2;
+                Console.Write(sonuc);
+                Console.ReadKey();
+                Console.Clear();
+                Console.Write("Çıkmak İçin 0'a basın. Başa dönmek için 1'e basın.");
+                sonuc = Convert.ToInt32(Console.ReadLine());
+                if (sonuc == 0)
+                {
+                    temiz = false;
+                }
+                Console.ReadKey();
+                break;
+            case 2:
+                sonuc = say1 - say2;
+                Console.Write(sonuc);
+                Console.ReadKey();
+                Console.Clear();
+                Console.Write("Çıkmak İçin 0'a basın. Başa dönmek için 1'e basın.");
+                sonuc = Convert.ToInt32(Console.ReadLine());
+                if (sonuc == 0)
+                {
+                    temiz = false;
+                }
+                Console.ReadKey();
+                break;
+            case 3:
+                sonuc = say1 * say2;
+                Console.Write(sonuc);
+                Console.ReadKey();
+                Console.Clear();
+                Console.Write("Çıkmak İçin 0'a basın. Başa dönmek için 1'e basın.");
+                sonuc = Convert.ToInt32(Console.ReadLine());
+                if (sonuc == 0)
+                {
+                    temiz = false;
+                }
+                Console.ReadKey();
+                break;
+            case 4:
+                sonuc = say1 / say2;
+                Console.Write(sonuc);
+                Console.ReadKey();
+                Console.Clear();
+                Console.Write("Çıkmak İçin 0'a basın. Başa dönmek için 1'e basın.");
+                sonuc = Convert.ToInt32(Console.ReadLine());
+                if (sonuc == 0)
+                {
+                    temiz = false;
+                }
+                Console.ReadKey();
+                break;
+            default:
+                    Console.Write("Eksik ya da hatalı giriş yaptınız. Lütfen bir daha deneyin.");
+                    Console.ReadKey();
+            break;
+        }
+    }
+}
