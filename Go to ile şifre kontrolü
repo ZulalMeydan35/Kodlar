@@ -1,0 +1,29 @@
+static void Main(string[] args)
+{
+    int hak = 3;
+    Console.WriteLine("Pin Kodu Girin.");
+    goto xyz;
+giris:
+    Console.WriteLine("Yanlış Girdiniz. Tekrar deneyin.");
+    xyz:
+    string x=Console.ReadLine();
+
+    if (x == "1306")
+    {
+        Console.WriteLine("Pin kodu doğru.");
+        Console.ReadKey();
+    }
+    else 
+    {
+        hak = hak - 1;
+        if (hak == 0)
+        {
+            Console.WriteLine("Tüm haklarınız bitti");
+            Console.ReadKey();
+        }
+        else
+        {
+            goto giris;
+        }
+    }
+}
